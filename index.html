@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Philanthropy: Data to Information</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            background-color: #f4f6f9; 
+            font-family: 'Figtree', sans-serif;
+        }
+        
+        /* Navbar Styling */
+        .navbar-custom {
+            background-color: #2c3e50;
+        }
+
+        /* Card Styling for Visualizations */
+        .vis-card { 
+            background: white; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            padding: 20px; 
+            margin-bottom: 30px; 
+            height: 100%;
+        }
+        .vis-frame { 
+            width: 100%; 
+            height: 500px; 
+            border: none; 
+            border-radius: 5px; 
+            background-color: #f8f9fa; 
+        }
+        
+        /* Insight Box Styling */
+        .insight-box { 
+            background-color: #eef2f7; 
+            border-left: 5px solid #0d6efd; 
+            padding: 15px; 
+            margin-top: 15px; 
+            font-size: 0.95rem;
+        }
+        .insight-title { 
+            font-weight: bold; 
+            color: #0d6efd; 
+            margin-bottom: 5px; 
+        }
+
+        /* Typography */
+        h1 { font-weight: 800; color: #2c3e50; }
+        h2 { color: #2c3e50; font-weight: 700; margin-bottom: 1.5rem; }
+        
+        .header-section { 
+            background: white; 
+            padding: 80px 0; 
+            border-bottom: 1px solid #ddd; 
+            margin-bottom: 40px; 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-earth-americas me-2"></i>Global Giving Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#motivation">Motivation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#analysis">Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#methodology">Methodology</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-section text-center" id="motivation">
+        <div class="container">
+            <h1 class="display-4 mb-3">Does a "Better" Environment Lead to More Giving?</h1>
+            <p class="lead text-secondary w-75 mx-auto mb-4">
+                A Data-to-Information Project Analyzing the Global Philanthropy Environment Index (GPEI) vs. the World Giving Index (WGI).
+            <p class="mt-2"><strong>By Seamus DiGiorno & Maya Tuviera</strong></p>
+            </p>
+            
+            <div class="row justify-content-center mt-5 text-start">
+                <div class="col-md-5">
+                    <h5 class="text-primary fw-bold"><i class="fa-solid fa-users me-2"></i>Target User</h5>
+                    <p class="text-muted small">
+                        Policymakers and NGO leaders who need to understand if improving government regulations actually results in increased public generosity, or if culture plays a bigger role.
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <h5 class="text-primary fw-bold"><i class="fa-solid fa-database me-2"></i>Data Source</h5>
+                    <p class="text-muted small">
+                        <strong>Primary:</strong> Indiana University Global Philanthropy Environment Index (GPEI).<br>
+                        <strong>Secondary:</strong> CAF World Giving Index (WGI).
+                    </p>
+                </div>
+            </div>
+            
+            <a href="#analysis" class="btn btn-primary btn-lg mt-5 rounded-pill px-5 shadow">View The Data Journey</a>
+        </div>
+    </div>
+
+    <div class="container" id="analysis">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary mb-2">Analysis</span>
+            <h2>Data to Information Journey</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>1. Global Generosity vs. Policy</h3>
+                    <p class="text-muted small">Comparing geographic spread of policy scores (color) vs. giving behavior (size).</p>
+                    <iframe src="vis1_map.html" class="vis-frame" title="Map Visualization"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>The European Paradox:</strong> Western Europe appears dark purple (High Policy Score) but has relatively small bubbles.</li>
+                            <li><strong>The Global South Leader:</strong> Southeast Asia (Indonesia) displays the largest bubbles despite lighter coloring.</li>
+                            <li><strong>US Alignment:</strong> The US shows a rare alignment where policy support matches public behavior.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>2. Correlation Analysis</h3>
+                    <p class="text-muted small">Is there a linear relationship between GPEI (X-axis) and WGI (Y-axis)?</p>
+                    <iframe src="vis2_scatter.html" class="vis-frame" title="Scatter Plot"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>Weak Correlation:</strong> The data distribution is scattered, indicating that a "better" environment does not reliably predict higher giving.</li>
+                            <li><strong>The "Culture" Cluster:</strong> Top-left cluster (African/SE Asian nations) proves giving persists in restrictive environments.</li>
+                            <li><strong>The "Policy" Cluster:</strong> Bottom-right cluster (Europe) suggests high taxes may reduce the perceived need for charity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>3. Giving by Environment Category</h3>
+                    <p class="text-muted small">Distribution of WGI scores across Low, Medium, and High GPEI environments.</p>
+                    <iframe src="vis3_boxplot.html" class="vis-frame" title="Box Plot"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>High Variance in 'Low' Env:</strong> Contains both the world's most generous and least generous countries.</li>
+                            <li><strong>Consistency in 'High' Env:</strong> Good policy creates a consistent "floor" for giving, but doesn't raise the "ceiling."</li>
+                            <li><strong>Median Similarity:</strong> "Medium" environments often outperform "High" environments.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>4. Multivariate Factor Analysis</h3>
+                    <p class="text-muted small">Comparing specific GPEI factors (Tax, Cross-Border) against Generosity.</p>
+                    <iframe src="vis4_matrix.html" class="vis-frame" title="Matrix Chart"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>Tax Incentives:</strong> Positive correlation with "Donating Money," but zero correlation with "Helping a Stranger."</li>
+                            <li><strong>Cross-Border Friction:</strong> Countries blocking foreign funds (e.g., Nigeria) still maintain high domestic giving.</li>
+                            <li><strong>Regulatory Quality:</strong> "Ease of Operating" matters to NGOs but not to the average citizen donor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>5. Regional Generosity Gap</h3>
+                    <p class="text-muted small">Average WGI (Blue) vs. GPEI (Red) scores by Region.</p>
+                    <iframe src="vis5_regions.html" class="vis-frame" title="Bar Chart"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>The Africa Gap:</strong> Generosity (WGI) massively exceeds the Policy Environment (GPEI).</li>
+                            <li><strong>The European Gap:</strong> Policy Environment score is significantly higher than the actual Generosity score.</li>
+                            <li><strong>Southeast Asia Anomaly:</strong> Exceptional performance on both metrics relative to economic development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="vis-card">
+                    <h3>6. Global Density Clusters</h3>
+                    <p class="text-muted small">Where do the majority of the world's countries sit?</p>
+                    <iframe src="vis6_heatmap.html" class="vis-frame" title="Heatmap"></iframe>
+                    <div class="insight-box">
+                        <div class="insight-title">Key Insights:</div>
+                        <ul>
+                            <li><strong>The "Moderate" Trap:</strong> Most countries have decent policies but only moderate giving.</li>
+                            <li><strong>The Empty Quadrant:</strong> Very few countries exist in "Low Policy / Low Giving."</li>
+                            <li><strong>The Elite Corner:</strong> Only a few nations (USA, Aus, NZ, Singapore) reach the "High Policy / High Giving" sweet spot.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="methodology">
+        <div class="header-section p-5 border rounded bg-white shadow-sm">
+            <h2 class="text-center mb-4">Methodology & Reflection</h2>
+            <div class="accordion" id="accordionRubric">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <strong>Data Transformation Process</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionRubric">
+                        <div class="accordion-body text-secondary">
+                            We merged two distinct datasets using ISO Country Codes. The GPEI data (Scale 1-5) was normalized to match the WGI percentage scale (0-100) to allow for direct comparison in the charts above. We filtered for countries present in both datasets (n=98).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <strong>Most Challenging Aspect</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionRubric">
+                        <div class="accordion-body text-secondary">
+                            The biggest challenge was handling the missing values for smaller nations that appeared in the World Giving Index but lacked a comprehensive Philanthropy Environment score. We had to decide whether to impute the average regional score or exclude them to maintain accuracy. We chose exclusion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            <strong>Most Rewarding Aspect</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionRubric">
+                        <div class="accordion-body text-secondary">
+                            Discovering the "European Paradox" was the most rewarding insight. It challenged our initial hypothesis that better government support always leads to more individual charity, proving that data can reveal counter-intuitive cultural trends.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 small">&copy; 2025 Principles of Computing Final Project</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
