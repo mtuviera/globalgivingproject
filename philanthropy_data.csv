@@ -1,0 +1,26 @@
+Country,Region,WGI_Score,GPEI_Score,GPEI_Category,WGI_Rank_2024,GPEI_Factor_Tax,GPEI_Factor_CrossBorder
+Indonesia,Southeast Asia,68,3.2,Medium,1,3.0,2.5
+Kenya,Sub-Saharan Africa,61,3.6,Medium,2,3.5,3.0
+Singapore,Southeast Asia,61,4.6,High,3,4.8,4.5
+Gambia,Sub-Saharan Africa,58,2.8,Low,4,2.5,2.0
+Nigeria,Sub-Saharan Africa,57,3.1,Low,5,3.0,2.5
+United States,North America,58,4.8,High,6,4.9,4.5
+Ukraine,Eastern Europe,62,3.0,Low,7,2.8,2.5
+Australia,Oceania,55,4.3,High,8,4.2,4.0
+United Arab Emirates,Middle East,50,3.8,High,9,4.0,3.5
+Malta,Western Europe,52,4.1,High,10,4.0,4.0
+Canada,North America,51,4.6,High,11,4.5,4.2
+New Zealand,Oceania,56,4.5,High,12,4.4,4.1
+United Kingdom,Western Europe,48,4.3,High,17,4.2,4.0
+Germany,Western Europe,38,4.5,High,35,4.4,4.2
+France,Western Europe,35,4.4,High,40,4.3,4.0
+Switzerland,Western Europe,40,4.7,High,25,4.8,4.6
+Brazil,Latin America,28,3.1,Low,89,3.0,2.5
+Argentina,Latin America,26,2.9,Low,95,2.8,2.2
+Mexico,Latin America,29,3.2,Low,80,3.1,2.8
+Venezuela,Latin America,22,1.8,Low,120,1.5,1.0
+China,East Asia,30,2.8,Low,90,2.5,2.0
+Japan,East Asia,18,4.0,High,110,4.0,3.8
+India,South Asia,39,3.5,Medium,60,3.5,2.5
+South Africa,Sub-Saharan Africa,42,3.7,Medium,45,3.6,3.0
+Myanmar,Southeast Asia,53,2.5,Low,15,2.0,1.5
